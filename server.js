@@ -1,4 +1,6 @@
 const express = require('express');
+const port = process.env.PORT || 3000;
+
 const app = new express();
 
 const hbs = require('hbs');
@@ -19,4 +21,5 @@ app.get('/about', (req, res) => {
 app.get('/profile', (req, res) => {
 	res.render('profile.hbs', {pageTitle: 'Profile Page', name: 'Bin Wei', University: 'GT', Address: 'Indiana'});
 });
-app.listen(3000);
+app.listen(port);
+
